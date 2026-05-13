@@ -1,0 +1,2 @@
+rows,timestamp_order_violations,duplicate_timestamps,first_timestamp,last_timestamp,min_spread_ticks,median_spread_ticks,p90_spread_ticks,p99_spread_ticks,max_spread_ticks,mean_imbalance,split_counts
+1036690,0,0,1722470402038431,1722988799947411,1,1.0,3.0,14.0,692,0.5006721490772728,"[{'split': 'test', 'rows': 345544}, {'split': 'train', 'rows': 518356}, {'split': 'validation', 'rows': 172790}]"

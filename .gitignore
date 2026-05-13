@@ -1,0 +1,19 @@
+.DS_Store
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+
+# Large raw/proprietary market data stays local.
+MD/*.csv
+data/raw/
+data/processed/
+
+# Keep the small sample dataset for reproducibility.
+!data/sample/
+!data/sample/*.parquet
+
+# Heavy generated time series can be reproduced.
+reports/tables/*.parquet
+
+# Keep lightweight report CSVs, figures, and markdown report in git.

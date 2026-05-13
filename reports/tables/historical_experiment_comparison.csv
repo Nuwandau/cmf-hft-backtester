@@ -1,0 +1,3 @@
+strategy,rows,final_pnl,pnl_volatility,max_drawdown,turnover,fill_count,buy_fills,sell_fills,final_inventory,max_abs_inventory,avg_abs_inventory,avg_quoted_spread_ticks,split,runtime_mode,fill_mode,fees_bps
+avellaneda_stoikov_mid,345544,-393.8770859999993,0.016303277112494814,395.11032199999937,1188876.5947158006,17466,8747,8719,3620.0,38599.0,5385.461255295997,106.52488250410946,test,fast_numba,visible_size,0.0
+avellaneda_stoikov_microprice,345544,-392.97142455000136,0.016198743602296964,394.0835903500016,1183641.4904543033,17401,8712,8689,-1279.0,38453.0,5432.70791274049,106.5283408191142,test,fast_numba,visible_size,0.0

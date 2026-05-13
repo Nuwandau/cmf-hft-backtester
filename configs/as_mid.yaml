@@ -1,0 +1,42 @@
+data:
+  raw_lob_path: "data/raw/lob.parquet"
+  processed_lob_path: "data/processed/lob_l1.parquet"
+  sample_lob_path: "data/sample/lob_sample.parquet"
+  split: "test"
+  tick_size: 0.0000001
+
+splits:
+  train_dates: ["2024-08-01", "2024-08-02", "2024-08-03"]
+  validation_dates: ["2024-08-04"]
+  test_dates: ["2024-08-05", "2024-08-06"]
+
+strategy:
+  name: "avellaneda_stoikov_mid"
+  gamma: 0.0001
+  k: 0.025
+  tau_seconds: 180.0
+  order_size: 10000.0
+  max_inventory: 100000.0
+  # AS q is measured in model inventory lots; the portfolio still tracks raw amount.
+  inventory_risk_unit: 10000.0
+  min_spread_ticks: 1
+  quote_refresh_seconds: 0.25
+  post_only: true
+
+volatility:
+  method: "rolling_time"
+  window_seconds: 300.0
+  floor_ticks_per_sqrt_second: 0.1
+
+execution:
+  model: "lob_crossing"
+  fill_mode: "visible_size"
+  full_fill: false
+  fees_bps: 0.0
+
+runtime:
+  mode: "fast_numba"
+
+outputs:
+  results_dir: "reports/tables"
+  figures_dir: "reports/figures"

@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cmf-backtester"
+version = "0.1.0"
+description = "Educational HFT market-making backtester for LOB replay and Avellaneda-Stoikov strategies."
+requires-python = ">=3.11"
+dependencies = [
+    "polars>=0.20",
+    "numpy>=1.26",
+    "scipy>=1.11",
+    "numba>=0.65",
+    "matplotlib>=3.8",
+    "pyyaml>=6.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "ruff>=0.6",
+]
+speedups = [
+    "cython",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
