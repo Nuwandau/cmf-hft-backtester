@@ -1,0 +1,21 @@
+symbol,source,timestamp_utc,issue_type,severity,notes
+btcusdt,binance_trades,"",trade_far_or_ambiguous_vs_bbo,medium,split=train buy above_ask rows=60845946
+btcusdt,binance_trades,"",trade_far_or_ambiguous_vs_bbo,medium,split=train buy below_bid rows=1281190
+btcusdt,binance_trades,"",trade_far_or_ambiguous_vs_bbo,medium,split=train sell above_ask rows=1254542
+btcusdt,binance_trades,"",trade_far_or_ambiguous_vs_bbo,medium,split=train sell below_bid rows=61903396
+btcusdt,binance_trades,"",trade_far_or_ambiguous_vs_bbo,medium,split=validation buy above_ask rows=61260430
+btcusdt,binance_trades,"",trade_far_or_ambiguous_vs_bbo,medium,split=validation buy below_bid rows=1925243
+btcusdt,binance_trades,"",trade_far_or_ambiguous_vs_bbo,medium,split=validation sell above_ask rows=1790312
+btcusdt,binance_trades,"",trade_far_or_ambiguous_vs_bbo,medium,split=validation sell below_bid rows=62152968
+ethusdt,binance_trades,"",trade_far_or_ambiguous_vs_bbo,medium,split=train buy above_ask rows=118115945
+ethusdt,binance_trades,"",trade_far_or_ambiguous_vs_bbo,medium,split=train buy below_bid rows=3430581
+ethusdt,binance_trades,"",trade_far_or_ambiguous_vs_bbo,medium,split=train sell above_ask rows=3461508
+ethusdt,binance_trades,"",trade_far_or_ambiguous_vs_bbo,medium,split=train sell below_bid rows=120658597
+ethusdt,binance_trades,"",trade_far_or_ambiguous_vs_bbo,medium,split=validation buy above_ask rows=107243780
+ethusdt,binance_trades,"",trade_far_or_ambiguous_vs_bbo,medium,split=validation buy below_bid rows=3964972
+ethusdt,binance_trades,"",trade_far_or_ambiguous_vs_bbo,medium,split=validation sell above_ask rows=3875534
+ethusdt,binance_trades,"",trade_far_or_ambiguous_vs_bbo,medium,split=validation sell below_bid rows=109151501
+btcusdt,binance_trades,"",duplicate_timestamps,low,duplicate_timestamp_rows=316865596
+btcusdt,bybit_liquidations,"",duplicate_timestamps,low,duplicate_timestamp_rows=5094
+ethusdt,binance_trades,"",duplicate_timestamps,low,duplicate_timestamp_rows=597583948
+ethusdt,bybit_liquidations,"",duplicate_timestamps,low,duplicate_timestamp_rows=2664

@@ -5,3 +5,7 @@ numba>=0.65
 matplotlib>=3.8
 pyyaml>=6.0
 pytest>=8.0
+pandas>=3.0
+nbformat>=5.10
+nbclient>=0.10
+ipykernel>=7.0

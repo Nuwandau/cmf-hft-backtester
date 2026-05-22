@@ -1,0 +1,13 @@
+side,rows,source,symbol
+sell,201538407,binance_trades,btcusdt
+buy,200364106,binance_trades,btcusdt
+buy,50046,binance_liquidations,btcusdt
+sell,64209,binance_liquidations,btcusdt
+sell,153798,bybit_liquidations,btcusdt
+buy,74857,bybit_liquidations,btcusdt
+sell,353473661,binance_trades,ethusdt
+buy,352406724,binance_trades,ethusdt
+buy,58295,binance_liquidations,ethusdt
+sell,73474,binance_liquidations,ethusdt
+sell,112667,bybit_liquidations,ethusdt
+buy,47547,bybit_liquidations,ethusdt

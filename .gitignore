@@ -15,5 +15,12 @@ data/processed/
 
 # Heavy generated time series can be reproduced.
 reports/tables/*.parquet
+reports/liquidation_eda/tables/*.parquet
+reports/liquidation_eda/cache/
 
 # Keep lightweight report CSVs, figures, and markdown report in git.
+
+# Research papers can be stored locally for agents, but PDFs/books are usually
+# large and may be copyrighted. Track notes and metadata, not the binaries.
+docs/research/papers/*
+!docs/research/papers/.gitkeep

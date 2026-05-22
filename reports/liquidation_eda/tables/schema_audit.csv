@@ -1,0 +1,9 @@
+source,venue,data_type,symbol,ok,issue,columns,dtypes,expected_columns
+binance_trades,binance,trades,btcusdt,true,"","timestamp,ticker,side,price,amount","Int64,String,String,Float64,Float64","timestamp,ticker,side,price,amount"
+binance_booktickers,binance,bbo,btcusdt,true,"","timestamp,ticker,bid_price,bid_amount,ask_price,ask_amount","Int64,String,Float64,Float64,Float64,Float64","timestamp,ticker,bid_price,bid_amount,ask_price,ask_amount"
+binance_liquidations,binance,liquidations,btcusdt,true,"","timestamp,ticker,side,price,amount","Int64,String,String,Float64,Float64","timestamp,ticker,side,price,amount"
+bybit_liquidations,bybit,liquidations,btcusdt,true,"","timestamp,ticker,side,price,amount","Int64,String,String,Float64,Float64","timestamp,ticker,side,price,amount"
+binance_trades,binance,trades,ethusdt,true,"","timestamp,ticker,side,price,amount","Int64,String,String,Float64,Float64","timestamp,ticker,side,price,amount"
+binance_booktickers,binance,bbo,ethusdt,true,"","timestamp,ticker,bid_price,bid_amount,ask_price,ask_amount","Int64,String,Float64,Float64,Float64,Float64","timestamp,ticker,bid_price,bid_amount,ask_price,ask_amount"
+binance_liquidations,binance,liquidations,ethusdt,true,"","timestamp,ticker,side,price,amount","Int64,String,String,Float64,Float64","timestamp,ticker,side,price,amount"
+bybit_liquidations,bybit,liquidations,ethusdt,true,"","timestamp,ticker,side,price,amount","Int64,String,String,Float64,Float64","timestamp,ticker,side,price,amount"

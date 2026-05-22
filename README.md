@@ -62,7 +62,7 @@ Markov model over imbalance buckets and spread states.
 ```text
 configs/                 YAML experiment configs
 data/sample/             small reproducible sample dataset
-docs/                    model description, technical docs, roadmap
+docs/                    model description, technical docs, research notes, roadmap
 reports/                 generated performance report, tables, figures
 src/cmf_backtester/
   backtest/              event loop and Numba backtest kernel
@@ -76,6 +76,19 @@ src/cmf_backtester/
   strategies/            Avellaneda-Stoikov strategies
 tests/                   unit and smoke tests
 ```
+
+## Working With Agents
+
+The repository includes lightweight project memory for coding and research agents:
+
+- [AGENTS.md](AGENTS.md): operating manual, safe commands, quant invariants.
+- [CONTEXT.md](CONTEXT.md): stable project context and economic interpretation.
+- [Agent memory](docs/agent_memory.md): durable facts and open research directions.
+- [Research workspace](docs/research/README.md): source registry, local paper storage,
+  and paper/experiment note templates.
+- [Architecture decisions](docs/decisions/README.md): ADRs for stable design choices.
+- [Agent playbooks](docs/agent_playbooks/quant_research_workflow.md): reusable workflows
+  for quant research and performance optimization.
 
 ## Data
 
@@ -108,6 +121,44 @@ Expected trades source, currently used only for diagnostics/roadmap:
 data/raw/trades.parquet
 ```
 
+## Liquidation EDA Notebook
+
+The repository also contains a separate full-data exploratory analysis for the
+liquidation research task:
+
+- [Notebook report](notebooks/liquidation_eda.ipynb)
+- [Markdown report](reports/liquidation_eda/liquidation_eda_report.md)
+- [EDA config](configs/liquidation_eda.yaml)
+- [Research hypotheses](docs/research/notes/liquidation_signal_hypotheses.md)
+
+The notebook studies Binance trades, Binance BBO, Binance liquidations, and
+Bybit liquidations. It checks timestamp and side conventions, duplicate
+timestamps, BBO quality, trade-to-BBO alignment, OFI, queue imbalance,
+full-data maker markouts, liquidation context, signed-flow response functions,
+and liquidation event studies.
+
+The latest full run processed:
+
+```text
+Binance trades: 1,107,782,898 rows
+Binance BBO:      206,966,513 rows
+```
+
+Open the notebook in GitHub preview, VS Code, JupyterLab, or any standard
+notebook viewer. The executed tables and figures are saved in the notebook.
+
+Regenerate the full EDA artifacts when the raw liquidation data is available:
+
+```bash
+PYTHONPATH=src .venv/bin/python -m cmf_backtester.main run-liquidation-eda \
+  --config configs/liquidation_eda.yaml --profile full
+```
+
+The full pipeline is intentionally separated from the notebook because the
+full-data run is expensive. The notebook loads the generated CSV tables and PNG
+figures from `reports/liquidation_eda/` and preserves executed outputs for
+review.
+
 ## Installation
 
 ```bash
@@ -124,7 +175,7 @@ PYTHONPATH=src .venv/bin/python -m pytest
 Current test status:
 
 ```text
-13 passed
+27 passed
 ```
 
 ## Reproducing The Pipeline
@@ -179,6 +230,8 @@ Detailed outputs:
 - [Model description](docs/model_description.md)
 - [Research audit](docs/research_audit.md)
 - [Improvement roadmap](docs/improvement_roadmap.md)
+- [Agent instructions](AGENTS.md)
+- [Research source registry](docs/research/source_registry.yaml)
 
 ## Key Assumptions
 

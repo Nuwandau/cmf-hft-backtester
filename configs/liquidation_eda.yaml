@@ -1,0 +1,51 @@
+raw_root: data/raw/liquidation_task
+output_root: reports/liquidation_eda
+processed_root: data/processed/liquidation_task
+
+symbols:
+  - btcusdt
+  - ethusdt
+
+markout_horizons_seconds:
+  - 30
+  - 120
+  - 300
+
+eda_curve_horizons_seconds:
+  - 1
+  - 5
+  - 10
+  - 30
+  - 60
+  - 120
+  - 300
+
+short_flow_windows_ms:
+  - 100
+  - 250
+  - 500
+  - 1000
+  - 2000
+
+bybit_delay_us: 200000
+maker_rebate_bps: 0.5
+bbo_staleness_tolerance_us: 5000000
+plot_sample_rows: 200000
+reuse_source_audit: true
+profile: quick
+
+quick:
+  max_trade_rows_per_symbol: 50000
+  max_bbo_rows_per_symbol: 75000
+  max_liquidation_rows_per_symbol: 25000
+  event_study_top_n: 250
+  full_data_batch_minutes: 15
+  max_full_data_batches_per_date: 2
+
+full:
+  max_trade_rows_per_symbol: 300000
+  max_bbo_rows_per_symbol: 300000
+  max_liquidation_rows_per_symbol: 100000
+  event_study_top_n: 2000
+  full_data_batch_minutes: 60
+  max_full_data_batches_per_date: 0

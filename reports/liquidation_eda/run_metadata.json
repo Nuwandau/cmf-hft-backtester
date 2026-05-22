@@ -1,0 +1,40 @@
+{
+  "config_path": "configs/liquidation_eda.yaml",
+  "data_scope_note": "Core markout, liquidation context, OFI, queue imbalance, response functions, and event-study tables are computed on all rows for the selected profile. Deterministic samples are used only for visual distribution plots.",
+  "full_data_batch_minutes": 60,
+  "full_data_dates_processed": 90,
+  "full_data_max_batches_per_date": 0,
+  "full_data_mode": true,
+  "generated_at_utc": "2026-05-21T21:45:58Z",
+  "git_commit": "0998e7778f4f0d6436222a15cef8521ecf09d4ff",
+  "numpy_version": "2.4.4",
+  "outputs": [
+    "reports/liquidation_eda/liquidation_eda_report.md",
+    "reports/liquidation_eda/run_metadata.json"
+  ],
+  "phase_seconds": {
+    "figures": 1.7679560838732868,
+    "full_data_eda": 5898.22658612486,
+    "sampled_symbol_eda": 18.673364834161475,
+    "source_audit": 0.005378042114898562,
+    "write_tables": 2.248356333002448
+  },
+  "platform": "macOS-26.4.1-arm64-arm-64bit-Mach-O",
+  "polars_version": "1.40.1",
+  "processed_bbo_rows_full": 206966513,
+  "processed_trade_batches_full": 4320,
+  "processed_trade_rows_full": 1107782898,
+  "profile": "full",
+  "python_version": "3.13.5",
+  "source_audit_reused": true,
+  "source_rows": {
+    "binance_booktickers:btcusdt": 99169477,
+    "binance_booktickers:ethusdt": 107797036,
+    "binance_liquidations:btcusdt": 114255,
+    "binance_liquidations:ethusdt": 131769,
+    "binance_trades:btcusdt": 401902513,
+    "binance_trades:ethusdt": 705880385,
+    "bybit_liquidations:btcusdt": 228655,
+    "bybit_liquidations:ethusdt": 160214
+  }
+}

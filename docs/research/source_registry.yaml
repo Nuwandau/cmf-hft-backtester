@@ -1,0 +1,174 @@
+sources:
+  - id: avellaneda_stoikov_2008
+    type: paper
+    title: "High-frequency trading in a limit order book"
+    authors: ["Marco Avellaneda", "Sasha Stoikov"]
+    year: 2008
+    local_file: "docs/research/papers/MARCO_AVELLANEDA_and_SASHA_STOIKOV—High_Frequency_Trading_in_a_Limit.pdf"
+    used_for:
+      - "reservation price"
+      - "optimal spread approximation"
+      - "inventory-risk interpretation"
+    notes: "Core model for both implemented strategies."
+
+  - id: stoikov_2018_microprice
+    type: paper
+    title: "The micro-price: a high-frequency estimator of future prices"
+    authors: ["Sasha Stoikov"]
+    year: 2018
+    local_file: "docs/research/papers/Sasha_Stoikov_—_The_Micro_Price_A_High_Frequency_Estimator_of_Future.pdf"
+    used_for:
+      - "imbalance states"
+      - "spread states"
+      - "finite-state microprice adjustment"
+    notes: "Core model for the microprice-enhanced reference price."
+
+  - id: hummingbot
+    type: github
+    title: "Hummingbot"
+    url: "https://github.com/hummingbot/hummingbot"
+    used_for:
+      - "architecture inspiration"
+      - "market-making terminology"
+    notes: "Do not copy production code; use as a reference for concepts and naming."
+
+  - id: fedecaccia_avellaneda_stoikov
+    type: github
+    title: "fedecaccia/avellaneda-stoikov"
+    url: "https://github.com/fedecaccia/avellaneda-stoikov"
+    used_for:
+      - "model comparison"
+      - "educational AS implementation reference"
+
+  - id: openai_agents_md
+    type: github
+    title: "openai/agents.md"
+    url: "https://github.com/openai/agents.md"
+    used_for:
+      - "agent instruction file convention"
+      - "project-level coding-agent guidance"
+
+  - id: karpathy_autoresearch
+    type: github
+    title: "karpathy/autoresearch"
+    url: "https://github.com/karpathy/autoresearch"
+    used_for:
+      - "research automation inspiration"
+      - "paper-to-code workflow ideas"
+
+  - id: mattpocock_skills
+    type: github
+    title: "mattpocock/skills"
+    url: "https://github.com/mattpocock/skills"
+    used_for:
+      - "task-specific agent playbook idea"
+
+  - id: rohitg00_agentmemory
+    type: github
+    title: "rohitg00/agentmemory"
+    url: "https://github.com/rohitg00/agentmemory"
+    used_for:
+      - "durable project memory idea"
+
+  - id: tencentdb_agent_memory
+    type: github
+    title: "Tencent/TencentDB-Agent-Memory"
+    url: "https://github.com/Tencent/TencentDB-Agent-Memory"
+    used_for:
+      - "structured long-term agent context idea"
+
+  - id: liquidation_task_description
+    type: dataset_task
+    title: "Liquidation signal task description"
+    local_file: "data/raw/liquidation_task/description.md"
+    used_for:
+      - "Binance trades/BBO/liquidations schema"
+      - "Bybit liquidation schema"
+      - "side convention"
+      - "Bybit 200ms availability delay"
+      - "maker markout and score definition"
+    notes: "Local task description for the liquidation EDA and future trade-filter signal."
+
+  - id: albers_cucuringu_howison_shestopaloff_2021_fragmentation
+    type: paper
+    title: "Fragmentation, Price Formation, and Cross-Impact in Bitcoin Markets"
+    authors: ["Jakob Albers", "Mihai Cucuringu", "Sam Howison", "Alexander Y. Shestopaloff"]
+    year: 2021
+    local_file: "docs/research/papers/Fragmentation,_Price_Formation,_and_Cross_Impact_in_Bitcoin_Markets.pdf"
+    used_for:
+      - "crypto market fragmentation"
+      - "leader-lagger diagnostics"
+      - "cross-impact and lead-lag features"
+      - "trade flow imbalance"
+      - "adverse-selection curves for maker fills"
+    notes: "Directly relevant to Binance/Bybit liquidation EDA and future signal design."
+
+  - id: lillo_2021_order_flow_price_formation
+    type: paper
+    title: "Order flow and price formation"
+    authors: ["Fabrizio Lillo"]
+    year: 2021
+    local_file: "docs/research/papers/Order flow and price formation.pdf"
+    used_for:
+      - "order flow persistence"
+      - "market impact and response functions"
+      - "cross-impact"
+      - "confounding between order flow and price"
+      - "metaorder/co-impact intuition"
+    notes: "Useful for interpreting signed trade/liquidation flow and avoiding naive causal claims."
+
+  - id: cont_kukanov_stoikov_2011_price_impact_of_order_book_events
+    type: paper
+    title: "The price impact of order book events"
+    authors: ["Rama Cont", "Arseniy Kukanov", "Sasha Stoikov"]
+    year: 2011
+    local_file: "docs/research/papers/The_Price_Impact_of_Order_Book_Events_—_Rama_Cont,_Arseniy_Kukanov.pdf"
+    used_for:
+      - "level-I order flow imbalance"
+      - "price impact diagnostics"
+      - "BBO-derived OFI feature"
+    notes: "Relevant because Binance bookticker data can support L1 OFI-style diagnostics."
+
+  - id: gould_bonart_2015_queue_imbalance
+    type: paper
+    title: "Queue Imbalance as a One-Tick-Ahead Price Predictor in a Limit Order Book"
+    authors: ["Martin D. Gould", "Julius Bonart"]
+    year: 2015
+    local_file: "docs/research/papers/Queue_Imbalance_as_a_One_Tick_Ahead_Price_Predictor_in_a_Limit_Order.pdf"
+    used_for:
+      - "BBO queue imbalance buckets"
+      - "next mid-price movement diagnostics"
+      - "microprice intuition"
+    notes: "Useful for EDA of BBO imbalance and one-tick move probabilities."
+
+  - id: zhang_zohren_roberts_2020_deeplob
+    type: paper
+    title: "DeepLOB: Deep Convolutional Neural Networks for Limit Order Books"
+    authors: ["Zihao Zhang", "Stefan Zohren", "Stephen Roberts"]
+    year: 2020
+    local_file: "docs/research/papers/DeepLOB_Deep_Convolutional_Neural_Networks_for_Limit_Order_Books.pdf"
+    used_for:
+      - "future ML roadmap"
+      - "LOB normalization and non-stationarity awareness"
+    notes: "Not for first EDA implementation; keep as future ML reference."
+
+  - id: easley_lopez_de_prado_ohara_vpin
+    type: paper_note
+    title: "VPIN: Volume Synchronized Probability of Informed Trading"
+    authors: ["David Easley", "Marcos Lopez de Prado", "Maureen O'Hara"]
+    local_file: "docs/research/papers/David_Easley,_Marcos_López_de_Prado,_Maureen_O’Hara_—_The_Volume.pdf"
+    used_for:
+      - "order flow toxicity intuition"
+      - "volume-bucketed toxicity diagnostics"
+    notes: "Potential exploratory toxicity feature; not a first-pass signal requirement."
+
+  - id: hasbrouck_microstructure_notes
+    type: book_notes
+    title: "Empirical Market Microstructure"
+    authors: ["Joel Hasbrouck"]
+    local_file: "docs/research/papers/Hasbrouck's book copy.pdf"
+    used_for:
+      - "trade classification"
+      - "effective spread and price impact"
+      - "VAR/response-function background"
+    notes: "Broad reference for empirical microstructure methodology."

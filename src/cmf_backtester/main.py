@@ -756,6 +756,12 @@ def cmd_make_report(args: argparse.Namespace) -> None:
     print("Wrote reports/performance_report.md")
 
 
+def cmd_run_liquidation_eda(args: argparse.Namespace) -> None:
+    from cmf_backtester.liquidation.cli import run_liquidation_eda
+
+    run_liquidation_eda(args)
+
+
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(prog="cmf-backtester")
     sub = parser.add_subparsers(dest="command", required=True)
@@ -851,6 +857,11 @@ def build_parser() -> argparse.ArgumentParser:
 
     p = sub.add_parser("make-report")
     p.set_defaults(func=cmd_make_report)
+
+    p = sub.add_parser("run-liquidation-eda")
+    p.add_argument("--config", default="configs/liquidation_eda.yaml")
+    p.add_argument("--profile", choices=["quick", "full"], default=None)
+    p.set_defaults(func=cmd_run_liquidation_eda)
     return parser
 
 

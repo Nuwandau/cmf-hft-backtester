@@ -1,0 +1,9 @@
+source,venue,data_type,symbol,ticker,path,size_mb,exists
+binance_trades,binance,trades,btcusdt,perp:btcusdt,data/raw/liquidation_task/data/binance_trades/perp_btcusdt.parquet,1294.425892,true
+binance_booktickers,binance,bbo,btcusdt,perp:btcusdt,data/raw/liquidation_task/data/binance_booktickers/perp_btcusdt.parquet,796.61456,true
+binance_liquidations,binance,liquidations,btcusdt,perp:btcusdt,data/raw/liquidation_task/data/binance_liquidations/perp_btcusdt.parquet,1.445862,true
+bybit_liquidations,bybit,liquidations,btcusdt,btcusdt,data/raw/liquidation_task/data/bybit_liquidations/btcusdt.parquet,2.437223,true
+binance_trades,binance,trades,ethusdt,perp:ethusdt,data/raw/liquidation_task/data/binance_trades/perp_ethusdt.parquet,2118.505612,true
+binance_booktickers,binance,bbo,ethusdt,perp:ethusdt,data/raw/liquidation_task/data/binance_booktickers/perp_ethusdt.parquet,1249.317902,true
+binance_liquidations,binance,liquidations,ethusdt,perp:ethusdt,data/raw/liquidation_task/data/binance_liquidations/perp_ethusdt.parquet,1.812943,true
+bybit_liquidations,bybit,liquidations,ethusdt,ethusdt,data/raw/liquidation_task/data/bybit_liquidations/ethusdt.parquet,1.798941,true

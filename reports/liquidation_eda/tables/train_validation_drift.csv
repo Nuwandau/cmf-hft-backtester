@@ -1,0 +1,17 @@
+source,symbol,split,rows
+binance_booktickers,btcusdt,train,65654006
+binance_trades,ethusdt,train,388981166
+bybit_liquidations,btcusdt,train,124465
+binance_trades,btcusdt,validation,190513050
+binance_booktickers,ethusdt,validation,35257016
+binance_booktickers,ethusdt,train,72540020
+binance_booktickers,btcusdt,validation,33515471
+binance_trades,btcusdt,train,211389463
+binance_liquidations,btcusdt,train,63660
+bybit_liquidations,ethusdt,train,97116
+binance_liquidations,ethusdt,train,76634
+binance_liquidations,ethusdt,validation,55135
+binance_liquidations,btcusdt,validation,50595
+bybit_liquidations,ethusdt,validation,63098
+binance_trades,ethusdt,validation,316899219
+bybit_liquidations,btcusdt,validation,104190
